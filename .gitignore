@@ -1,0 +1,12 @@
+# General
+.DS_Store
+*.zip
+
+# Webpack
+node_modules/
+build/
+dist/
+
+# Build directories
+js/build
+css/build

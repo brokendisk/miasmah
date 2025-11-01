@@ -1,0 +1,29 @@
+// typography
+$font-family-default: 'ACaslonPro', 'Baskerville', 'Palatino Linotype', 'Palatino', 'Century Schoolbook L', 'Times New Roman', serif;
+$font-family-bold: 'ACaslonPro-Bold';
+$font-size-default: 1.6rem; // 16pt equivalent
+$line-height-default: 1.5;
+
+// Font size scale (based on image specifications)
+$font-size-xs: 1.1rem;   // 11pt
+$font-size-sm: 1.2rem;   // 12pt  
+$font-size-base: 1.4rem; // 14pt
+$font-size-lg: 1.6rem;   // 16pt
+$font-size-xl: 1.8rem;   // 18pt
+$font-size-2xl: 2.2rem;  // 22pt
+$font-size-3xl: 2.5rem;  // 25pt
+
+// colors
+$text-default: #FFF;
+$text-hover: #669;
+$text-lighter: #999;
+$link-default: #669;
+$link-hover: #666;
+$body-bg: #000;
+$selection-bg: #777;
+$border-default: #444;
+
+// breakpoints
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;

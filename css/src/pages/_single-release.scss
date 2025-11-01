@@ -1,0 +1,103 @@
+@use '../abstracts' as *;
+
+.release-detail {
+    a {
+        color: $link-default;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+
+    h1 {
+        font-size: $font-size-2xl; // 22pt for album title
+    }
+
+    h2 {
+        font-size: $font-size-sm; // 12pt for release details
+        
+        .release-date {
+            color: $text-lighter;
+            font-style: italic;
+            font-size: $font-size-xs; // 11pt for release date
+        }
+    }
+
+    h3 {
+        color: $text-lighter;
+    }
+}
+
+.release-cover {
+    margin-bottom: 2rem;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
+
+.release-description {
+    margin-bottom: 2rem;
+}
+
+.release-status {
+    color: $text-lighter;
+    margin-bottom: 2rem;
+
+    h3 {
+        color: $text-default;
+    }
+}
+
+.release-player {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.release-player h3,
+.release-status h3 {
+    text-transform: lowercase;
+    font-size: $font-size-base; // 14pt for player controls and tracklist
+}
+
+@media (width >= #{$breakpoint-medium}) {
+    .release-single {
+        display: grid;
+        grid-template-columns: 4fr 1fr 5fr;
+        grid-template-rows: 120px 372px auto;
+        gap: 4rem;
+
+        .release-detail {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .release-cover {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            margin-bottom: 0;
+        }
+
+        .release-description {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .release-player {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .release-status {
+            grid-column: 2;
+            grid-row: 3;
+        }
+    }
+
+    .release.book {
+        grid-template-rows: auto;
+    }
+}

@@ -1,0 +1,81 @@
+@use '../abstracts/' as *;
+
+.view-toggle {
+    margin-bottom: 2rem;
+    
+    a {
+        padding-right: 1rem;
+    }
+}
+
+
+
+.releases-all {
+    position: relative;
+
+    // Cover view layout (default visible)
+    ul.cover-view {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+
+        @media (width >= $breakpoint-medium) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+        }
+
+        &.release-hide {
+            display: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        // Image styles
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        // Lazy loading styles
+        img.lazy {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            
+            &.loading {
+                opacity: 0.5;
+            }
+            
+            &.loaded {
+                opacity: 1;
+            }
+            
+            &.error {
+                opacity: 0.3;
+                background: $selection-bg;
+            }
+        }
+    }
+
+    // List view layout (default hidden)
+    ul.list-view {
+        display: none;
+        list-style-type: none;
+        width: 100%;
+
+        &.active {
+            display: block;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+
+            // Label filtering
+            &.release-hide {
+                display: none;
+            }
+        }
+    }
+}

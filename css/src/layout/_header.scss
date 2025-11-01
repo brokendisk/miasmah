@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.header {
+    padding: 2rem 0 3rem;
+}
+
+.logo {
+    font-size: $font-size-3xl; // 25pt for main logo
+    span {
+        font-style: italic;
+        font-size: $font-size-lg; // 16pt for subtitle
+    }
+}
+
+@media (width >= #{$breakpoint-medium}) {
+    .header {
+        padding-top: 4rem;
+    }
+}

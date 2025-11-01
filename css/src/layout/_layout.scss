@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (min-width: $breakpoint-medium) {
+    main {
+        width: 66%;
+        min-height: 100vh;
+    }
+
+    aside.sidebar {
+        width: 34%;
+    }
+
+    main.override {
+        width: 100%;
+    }
+
+    // Simple two column layout
+    .grid {
+        display: grid;
+        gap: 4rem;
+
+        &--2col {
+            @media (min-width: $breakpoint-medium) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        &__main {
+            grid-column: 1;
+        }
+
+        &__side {
+            grid-column: 2;
+        }
+    }
+}
