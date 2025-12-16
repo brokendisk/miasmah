@@ -33,11 +33,24 @@
 
 <main class="releases-all override" role="main" aria-label="Content">
 
-	<div class="view-toggle">
-		view options:
-		<a href="#" class="covers">covers</a>
-		<a href="#" class="list">list</a>
-	</div>
+    <div class="releases-header">
+        <div class="view-toggle">
+            view options:
+            <a href="#" class="covers">covers</a>
+            &nbsp;/&nbsp;
+            <a href="#" class="list">list</a>
+        </div>
+        <?php /*
+        <div class="sort-toggle">
+            sort by:
+            <a href="#" class="sort-catalogue">catalogue</a>
+            &nbsp;/&nbsp;
+            <a href="#" class="sort-year">year</a>
+            &nbsp;/&nbsp;
+            <a href="#" class="sort-artist">artist</a>
+        </div>
+        */ ?>
+    </div>
 
 	<ul class="cover-view is-active">
 	<?php
@@ -56,6 +69,9 @@
 								 data-src="' . $morr_cover . '" 
 								 class="lazy" 
 								 alt="' . esc_attr($release->display_artist . ' - ' . $release->title) . '" />
+                            <span class="release-hover-detail">
+                                ' . $release->catalog_nr . ' - ' . $release->display_artist . ' - ' . '<i>' . $release->title . '</i>' . '
+                            </span>
 						</a>
 					</li>';
 		}
@@ -66,8 +82,8 @@
     <?php
         foreach ($releases as $release) {
 
-            echo '<li class="">
-                    <a href="' . get_the_permalink( $release->ID ) . '">' .  $release->catalog_nr . ' - ' . '<b>' . $release->display_artist . '</b>' . '&nbsp;-&nbsp;' . $release->title . '</a>
+            echo '<li>
+                    <a href="' . get_the_permalink( $release->ID ) . '">' .  $release->catalog_nr . ' - ' . $release->display_artist . '&nbsp;-&nbsp;' . '<span>' .  $release->title . '</span>' . '</a>
                     </li>';
         }
 	?>

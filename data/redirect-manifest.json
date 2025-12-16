@@ -1,0 +1,480 @@
+{
+  "main_pages": [
+    {
+      "old_url": "/recordings/index.html",
+      "description": "Homepage"
+    },
+    {
+      "old_url": "/recordings/cat.html",
+      "description": "Releases catalog page"
+    },
+    {
+      "old_url": "/recordings/info.html",
+      "description": "Info page"
+    },
+    {
+      "old_url": "/recordings/artists.html",
+      "description": "Artists page"
+    }
+  ],
+  "releases": [
+    {
+      "old_url": "/recordings/miacd062.html",
+      "catalog": "MIA 062",
+      "artist": "Erik K Skodvin",
+      "title": "From Darkness (Original Motion Picture Soundtrack)",
+      "year": 2025
+    },
+    {
+      "old_url": "/recordings/miacd060.html",
+      "catalog": "MIA 060",
+      "artist": "Olga Anna Markowska",
+      "title": "ISKRA",
+      "year": 2025
+    },
+    {
+      "old_url": "/recordings/miacd056.html",
+      "catalog": "MIA 056",
+      "artist": "Marcus Fjellström",
+      "title": "The Last Sunset of the Year",
+      "year": 2024
+    },
+    {
+      "old_url": "/recordings/miacd061.html",
+      "catalog": "MIA 061",
+      "artist": "Erik K Skodvin",
+      "title": "Afterwar",
+      "year": 2024
+    },
+    {
+      "old_url": "/recordings/miacd059.html",
+      "catalog": "MIA 059",
+      "artist": "Kaboom Karavan",
+      "title": "Fiasko!",
+      "year": 2024
+    },
+    {
+      "old_url": "/recordings/miacd058.html",
+      "catalog": "MIA 058",
+      "artist": "The Pitch & Julia Reidy",
+      "title": "Neutral Star",
+      "year": 2023
+    },
+    {
+      "old_url": "/recordings/miacd054.html",
+      "catalog": "MIA 054",
+      "artist": "Erik K Skodvin",
+      "title": "Schächten",
+      "year": 2022
+    },
+    {
+      "old_url": "/recordings/miacd053.html",
+      "catalog": "MIA 053",
+      "artist": "All That We See or Seem",
+      "title": "S/T",
+      "year": 2022
+    },
+    {
+      "old_url": "/recordings/miacd057.html",
+      "catalog": "MIA 057",
+      "artist": "Mondkopf",
+      "title": "Spring Stories",
+      "year": 2022
+    },
+    {
+      "old_url": "/recordings/miacd055.html",
+      "catalog": "MIA 055",
+      "artist": "Svarte Greiner",
+      "title": "Devolving Trust",
+      "year": 2022
+    },
+    {
+      "old_url": "/recordings/miacd052.html",
+      "catalog": "MIA 052",
+      "artist": "Deaf Center",
+      "title": "Neon City",
+      "year": 2022
+    },
+    {
+      "old_url": "/recordings/miacd051.html",
+      "catalog": "MIA 051",
+      "artist": "Matt Christensen",
+      "title": "Constant Green",
+      "year": 2022
+    },
+    {
+      "old_url": "/recordings/miacd050.html",
+      "catalog": "MIA 050",
+      "artist": "James Welburn",
+      "title": "Sleeper in the Void",
+      "year": 2021
+    },
+    {
+      "old_url": "/recordings/miacd048.html",
+      "catalog": "MIA 048",
+      "artist": "Joana Guerra",
+      "title": "Chão Vermelho",
+      "year": 2020
+    },
+    {
+      "old_url": "/recordings/miacd049.html",
+      "catalog": "MIA 049",
+      "artist": "Erik K Skodvin",
+      "title": "Anbessa",
+      "year": 2020
+    },
+    {
+      "old_url": "/recordings/miacd046.html",
+      "catalog": "MIA 046",
+      "artist": "Kaboom Karavan",
+      "title": "The Log and the Leeway",
+      "year": 2020
+    },
+    {
+      "old_url": "/recordings/miacd047.html",
+      "catalog": "MIA 047",
+      "artist": "Zelienople",
+      "title": "Hold You Up",
+      "year": 2020
+    },
+    {
+      "old_url": "/recordings/miacd045.html",
+      "catalog": "MIA 045",
+      "artist": "Gareth Davis & Scanner",
+      "title": "Footfalls",
+      "year": 2019
+    },
+    {
+      "old_url": "/recordings/miacd044.html",
+      "catalog": "MIA 044",
+      "artist": "Marcus Fjellström",
+      "title": "Gebrauchsmusik",
+      "year": 2019
+    },
+    {
+      "old_url": "/recordings/miacd043.html",
+      "catalog": "MIA 043",
+      "artist": "Marcus Fjellström",
+      "title": "Exercises in Estrangement",
+      "year": 2019
+    },
+    {
+      "old_url": "/recordings/miacd042.html",
+      "catalog": "MIA 042",
+      "artist": "Deaf Center / Svarte Greiner",
+      "title": "Owl Splinters / Twin",
+      "year": 2019
+    },
+    {
+      "old_url": "/recordings/miacd041.html",
+      "catalog": "MIA 041",
+      "artist": "Clarice Jensen",
+      "title": "For this from that will be filled",
+      "year": 2018
+    },
+    {
+      "old_url": "/recordings/miacd040.html",
+      "catalog": "MIA 040",
+      "artist": "Svarte Greiner",
+      "title": "Apart",
+      "year": 2017
+    },
+    {
+      "old_url": "/recordings/miacd039.html",
+      "catalog": "MIA 039",
+      "artist": "Svarte Greiner",
+      "title": "Knive",
+      "year": 2017
+    },
+    {
+      "old_url": "/recordings/miacd038.html",
+      "catalog": "MIA 038",
+      "artist": "Yair Elazar Glotman & Mats Erlandsson",
+      "title": "Negative Chambers",
+      "year": 2017
+    },
+    {
+      "old_url": "/recordings/miacd037.html",
+      "catalog": "MIA 037",
+      "artist": "Svarte Greiner",
+      "title": "Moss Garden",
+      "year": 2016
+    },
+    {
+      "old_url": "/recordings/miacd036.html",
+      "catalog": "MIA 036",
+      "artist": "Marcus Fjellström",
+      "title": "Skelektikon",
+      "year": 2017
+    },
+    {
+      "old_url": "/recordings/miacd035.html",
+      "catalog": "MIA 035",
+      "artist": "Deaf Center",
+      "title": "Pale Ravine",
+      "year": 2016
+    },
+    {
+      "old_url": "/recordings/miacd034.html",
+      "catalog": "MIA 034",
+      "artist": "Matt Christensen",
+      "title": "Honeymoons",
+      "year": 2016
+    },
+    {
+      "old_url": "/recordings/miacd033.html",
+      "catalog": "MIA 033",
+      "artist": "B/B/S/",
+      "title": "Palace",
+      "year": 2016
+    },
+    {
+      "old_url": "/recordings/miacd032.html",
+      "catalog": "MIA 032",
+      "artist": "Volcano The Bear",
+      "title": "Commencing",
+      "year": 2016
+    },
+    {
+      "old_url": "/recordings/miacd031.html",
+      "catalog": "MIA 031",
+      "artist": "James Welburn",
+      "title": "Hold",
+      "year": 2015
+    },
+    {
+      "old_url": "/recordings/miacd030.html",
+      "catalog": "MIA 030",
+      "artist": "Kreng",
+      "title": "The Summoner",
+      "year": 2015
+    },
+    {
+      "old_url": "/recordings/miacd029.html",
+      "catalog": "MIA 029",
+      "artist": "Andrea Belfi",
+      "title": "Natura Morta",
+      "year": 2014
+    },
+    {
+      "old_url": "/recordings/miacd028.html",
+      "catalog": "MIA 028",
+      "artist": "Shivers",
+      "title": "S/T",
+      "year": 2014
+    },
+    {
+      "old_url": "/recordings/miacd027.html",
+      "catalog": "MIA 027",
+      "artist": "Eric Thielemans",
+      "title": "Sprang",
+      "year": 2014
+    },
+    {
+      "old_url": "/recordings/miacd026.html",
+      "catalog": "MIA 026",
+      "artist": "Gabriel Saloman",
+      "title": "Soldier´s Requiem",
+      "year": 2014
+    },
+    {
+      "old_url": "/recordings/miacd025.html",
+      "catalog": "MIA 025",
+      "artist": "Kaboom Karavan",
+      "title": "Short Walk With Olaf",
+      "year": 2013
+    },
+    {
+      "old_url": "/recordings/miacd024.html",
+      "catalog": "MIA 024",
+      "artist": "Kaboom Karavan",
+      "title": "Hokus Fokus",
+      "year": 2013
+    },
+    {
+      "old_url": "/recordings/miacd023.html",
+      "catalog": "MIA 023",
+      "artist": "Svarte Greiner",
+      "title": "Black Tie",
+      "year": 2013
+    },
+    {
+      "old_url": "/recordings/miacd022-7.html",
+      "catalog": "MIA 022-7",
+      "artist": "B/B/S/",
+      "title": "Half Moon",
+      "year": 2013
+    },
+    {
+      "old_url": "/recordings/miacd022.html",
+      "catalog": "MIA 022",
+      "artist": "B/B/S/",
+      "title": "Brick Mask",
+      "year": 2013
+    },
+    {
+      "old_url": "/recordings/miacd021.html",
+      "catalog": "MIA 021",
+      "artist": "Gabriel Saloman",
+      "title": "Adhere",
+      "year": 2013
+    },
+    {
+      "old_url": "/recordings/miacd020.html",
+      "catalog": "MIA 020",
+      "artist": "Kreng",
+      "title": "Works for Abattoir Férme 2007 - 2011",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd019.html",
+      "catalog": "MIA 019",
+      "artist": "Gareth Davis & Frances-Marie Uitti",
+      "title": "Gramercy",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd018.html",
+      "catalog": "MIA 018",
+      "artist": "Gultskra Artikler",
+      "title": "Abtu / Anet",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd017.html",
+      "catalog": "MIA 017",
+      "artist": "Simon Scott",
+      "title": "Bunny",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd016.html",
+      "catalog": "MIA 016",
+      "artist": "Kreng",
+      "title": "Grimoire",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd015.html",
+      "catalog": "MIA 015",
+      "artist": "Kaboom Karavan",
+      "title": "Barra Barra",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd014.html",
+      "catalog": "MIA 014",
+      "artist": "Juv",
+      "title": "S/T",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd013.html",
+      "catalog": "MIA 013",
+      "artist": "Marcus Fjellström",
+      "title": "Schattenspieler",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd012.html",
+      "catalog": "MIA 012",
+      "artist": "FNS",
+      "title": "S/T",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd011.html",
+      "catalog": "MIA 011",
+      "artist": "Simon Scott",
+      "title": "Navigare",
+      "year": 2012
+    },
+    {
+      "old_url": "/recordings/miacd010.html",
+      "catalog": "MIA 010",
+      "artist": "Kreng",
+      "title": "L´Autopsie Phenomenale De Dieu",
+      "year": 2009
+    },
+    {
+      "old_url": "/recordings/miacd009.html",
+      "catalog": "MIA 009",
+      "artist": "Elegi",
+      "title": "Varde",
+      "year": 2009
+    },
+    {
+      "old_url": "/recordings/miacd008.html",
+      "catalog": "MIA 008",
+      "artist": "Jasper TX",
+      "title": "Black Sleep",
+      "year": 2008
+    },
+    {
+      "old_url": "/recordings/miacd007.html",
+      "catalog": "MIA 007",
+      "artist": "Jacaszek",
+      "title": "Treny",
+      "year": 2008
+    },
+    {
+      "old_url": "/recordings/miacd006.html",
+      "catalog": "MIA 006",
+      "artist": "Gultskra Artikler",
+      "title": "Kasha Iz Topora",
+      "year": 2007
+    },
+    {
+      "old_url": "/recordings/miacd005.html",
+      "catalog": "MIA 005",
+      "artist": "Elegi",
+      "title": "Sistereis",
+      "year": 2007
+    },
+    {
+      "old_url": "/recordings/miacd004.html",
+      "catalog": "MIA 004",
+      "artist": "Rafael Anton Irisiarri",
+      "title": "Daydreaming",
+      "year": 2007
+    },
+    {
+      "old_url": "/recordings/miacd003.html",
+      "catalog": "MIA 003",
+      "artist": "Greg Haines",
+      "title": "Slumber Tides",
+      "year": 2006
+    },
+    {
+      "old_url": "/recordings/miacd002.html",
+      "catalog": "MIA 002",
+      "artist": "Encre",
+      "title": "Plexus II",
+      "year": 2006
+    },
+    {
+      "old_url": "/recordings/miacd001.html",
+      "catalog": "MIA 001",
+      "artist": "V/A",
+      "title": "Silva",
+      "year": 2006
+    }
+  ],
+  "editions": [
+    {
+      "old_url": "/recordings/rr02.html",
+      "catalog": "RR 02",
+      "artist": "Svarte Greiner",
+      "title": "Five Hundred Fink Experience",
+      "note": "External link to bandcamp"
+    },
+    {
+      "old_url": "/recordings/rr01.html",
+      "catalog": "RR 01",
+      "artist": "Aaron Moore & Erik K Skodvin",
+      "title": "Hovering Mink",
+      "note": "External link to bandcamp"
+    }
+  ]
+}
+

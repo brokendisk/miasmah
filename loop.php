@@ -4,10 +4,10 @@
 
 		<p class="date">
 			<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php
-				the_date( 'd. F Y' ); ?></time>
+				the_date( 'F j Y' ); ?></time>
 		</p>
 
-		<h2>
+		<h2 class="title">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 		</h2>
 		

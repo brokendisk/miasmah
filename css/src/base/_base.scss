@@ -15,7 +15,6 @@ body {
 b,
 strong {
     font-family: $font-family-bold;
-    // font-family: ACaslonPro-Bold, $font-family-default;
 }
 
 img {
@@ -30,12 +29,12 @@ img {
 }
 
 a {
-    color: $text-default;
+    color: $link-default;
     text-decoration: none;
 
     &:focus,
     &:hover {
-        color: $text-hover;
+        color: $link-hover;
     }
 }
 
@@ -51,18 +50,18 @@ h6 {
 }
 
 h1 {
-    font-size: $font-size-2xl; // 22pt
+    font-size: $font-size-2xl;
 }
 
 h2 {
-    font-size: $font-size-lg; // 16pt
+    font-size: $font-size-lg;
 }
 
 h3,
 h4,
 h5,
 h6 {
-    font-size: $font-size-sm; // 12pt
+    font-size: $font-size-sm;
 }
 
 ul,

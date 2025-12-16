@@ -13,3 +13,11 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: ACaslonPro-Italic;
+    src: url('../../fonts/ACaslonPro-Italic.woff2') format('woff2'),
+         url('../../fonts/ACaslonPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}

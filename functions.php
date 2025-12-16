@@ -49,7 +49,7 @@ function enqueue_webpack_scripts() {
     
     $jsFilePath = glob( get_template_directory() . '/js/build/main.min.*.js' );
     $jsFileURI = get_template_directory_uri() . '/js/build/' . basename($jsFilePath[0]);
-    wp_enqueue_script( 'main_js', $jsFileURI , null , null , true );
+    wp_enqueue_script( 'main_js', $jsFileURI , array('jquery') , null , true );
 
     // Get and localize playlist data on single release pages only
     if (is_singular('release')) {
@@ -224,10 +224,44 @@ function batch_cache_morr_images($releases, $size = '1000_square') {
     }
     
     $cached_urls = array();
+    $current_time = time();
+    $cache_expiry = DAY_IN_SECONDS;
     
+    // Build a lookup array of existing cached files (single glob operation instead of N file_exists calls)
+    $cached_files = array();
+    $pattern = $cache_dir . '*_' . $size . '.jpeg';
+    $files = glob($pattern);
+    
+    if ($files) {
+        foreach ($files as $file_path) {
+            $filename = basename($file_path);
+            // Extract UUID from filename (format: {uuid}_{size}.jpeg)
+            $uuid = str_replace('_' . $size . '.jpeg', '', $filename);
+            $file_mtime = filemtime($file_path);
+            
+            // Only include if cache is still valid
+            if (($current_time - $file_mtime) < $cache_expiry) {
+                $cached_files[$uuid] = array(
+                    'path' => $file_path,
+                    'url' => $upload_dir['baseurl'] . '/morr-cache/' . $filename,
+                    'mtime' => $file_mtime
+                );
+            }
+        }
+    }
+    
+    // Process releases - use cached URLs when available, otherwise fetch
     foreach ($releases as $release) {
         if (!empty($release->morr_uuid)) {
-            $cached_urls[$release->morr_uuid] = get_cached_morr_image($release->morr_uuid, $size);
+            $uuid = $release->morr_uuid;
+            
+            // Use cached file if available
+            if (isset($cached_files[$uuid])) {
+                $cached_urls[$uuid] = $cached_files[$uuid]['url'];
+            } else {
+                // Only fetch if not in cache
+                $cached_urls[$uuid] = get_cached_morr_image($uuid, $size);
+            }
         }
     }
     

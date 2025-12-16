@@ -29,10 +29,19 @@
     ul {
         padding-bottom: 2em;
 
+        a {
+            color: $text-default;
+
+            &:hover {
+                color: $link-default;
+            }
+        }
+
         li {
-            font-size: $font-size-lg; // 16pt for navigation
+            font-size: $font-size-base;
             text-transform: uppercase;
             list-style-type: none;
+            margin-bottom: 1rem;
         }
 
         li.current-menu-item a {
@@ -46,8 +55,28 @@
 
         li:last-child a {
             // color: $link-default;
-            border: 1px solid #FFF;
+            border: 1px solid $text-default;
             padding: 0.5rem;
+        }
+    }
+
+    .eks-mobile-link {
+        padding-bottom: 1em;
+
+        li {
+            font-size: $font-size-base;
+            text-transform: uppercase;
+            list-style-type: none;
+        }
+
+        a {
+            color: $text-default;
+            border: none!important;
+            text-decoration: none!important;
+
+            &:hover {
+                color: $link-default;
+            }
         }
     }
 }
@@ -76,8 +105,17 @@
         ul {
             li {
                 display: inline-block;
-                margin-right: 2em;
+                margin: 0 2rem 0 0;
+
+                &:not(:last-child, :nth-last-child(2))::after {
+                    content: '/';
+                    margin-left: 2rem;
+                }
             }
+        }
+
+        .eks-mobile-link {
+            display: none;
         }
     }
 }

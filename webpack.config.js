@@ -17,6 +17,10 @@ module.exports = [
             filename: './js/build/[name].min.[fullhash].js',
             path: path.resolve(__dirname),
         },
+        externals: {
+            // Use WordPress's jQuery instead of bundling it
+            jquery: 'jQuery',
+        },
         module: {
             rules: [
                 // js babelization
@@ -28,11 +32,7 @@ module.exports = [
                 // sass compilation
                 {
                     test: /\.(sass|scss)$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        'css-loader',
-                        'sass-loader',
-                    ],
+                    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
                 },
                 // loader for webfonts (only required if loading custom fonts)
                 {
@@ -61,7 +61,8 @@ module.exports = [
             new MiniCssExtractPlugin({
                 filename: './css/build/main.min.[fullhash].css',
             }),
-            // Provide jQuery globally
+            // Provide jQuery globally (from WordPress, not bundled)
+            // Note: This assumes jQuery is available as an external
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',

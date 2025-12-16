@@ -5,15 +5,40 @@
 }
 
 .logo {
-    font-size: $font-size-3xl; // 25pt for main logo
-    span {
-        font-style: italic;
-        font-size: $font-size-lg; // 16pt for subtitle
+    font-size: $font-size-3xl;
+
+    a {
+        color: $text-default;
+
+        &:hover {
+            color: $link-default;
+        }
     }
+
+    span {
+        font-family: $font-family-italic;
+        font-size: $font-size-lg;
+    }
+}
+
+.eks-flag {
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 16px;
+    z-index: 1000;
+    color: $text-default;
+    font-size: $font-size-base;
 }
 
 @media (width >= #{$breakpoint-medium}) {
     .header {
         padding-top: 4rem;
+    }
+}
+
+@media (width >= #{$breakpoint-xlarge}) {
+    .eks-flag {
+        display: block;
     }
 }

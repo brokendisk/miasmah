@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+article {
+    .date {
+        color: $text-alternate;
+    }
+
+    .title {
+        font-size: $font-size-2xl;
+    }
+}
+

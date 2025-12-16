@@ -1,14 +1,9 @@
 @use '../abstracts/' as *;
 
-.view-toggle {
+.releases-header {
     margin-bottom: 2rem;
-    
-    a {
-        padding-right: 1rem;
-    }
+   
 }
-
-
 
 .releases-all {
     position: relative;
@@ -21,7 +16,7 @@
 
         @media (width >= $breakpoint-medium) {
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2rem;
+            grid-gap: 4rem;
         }
 
         &.release-hide {
@@ -37,6 +32,13 @@
             width: 100%;
             height: auto;
             display: block;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        // Remove grayscale on hover to show original colors
+        li:hover img {
+            filter: grayscale(0%);
         }
 
         // Lazy loading styles
@@ -57,6 +59,26 @@
                 background: $selection-bg;
             }
         }
+
+        a {
+            text-decoration: none;
+            position: relative;
+            
+            span {
+                display: none;
+                background: $link-default;
+                border: 1px solid $border-default;
+                color: $body-bg;
+                padding: 0.25rem 1rem;
+                z-index: 1000;
+            }
+
+            &:hover span {
+                display: block;
+                position: fixed;
+                overflow: hidden;
+            }
+        }
     }
 
     // List view layout (default hidden)
@@ -70,12 +92,15 @@
         }
 
         li {
-            margin-bottom: 0.5em;
+            margin-bottom: 0.5rem;
 
-            // Label filtering
             &.release-hide {
                 display: none;
             }
+        }
+
+        span {
+            font-family: $font-family-italic;
         }
     }
 }

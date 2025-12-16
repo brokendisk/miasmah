@@ -40,9 +40,6 @@ class release_main extends GenericMetabox {
             <div class="wpc_form_row wpc_form_row_fullwidth">
                 <?php $fields["display_artist"]->echo_field_with_label_left(); ?>
             </div>
-            <div class="wpc_form_row">
-                <?php $fields["type"]->echo_field_with_label_left(); ?>
-            </div>
             <div class="wpc_form_row wpc_form_row_fullwidth">
                 <?php $fields["edition"]->echo_field_with_label_left(); ?>
             </div>
@@ -67,6 +64,14 @@ class release_main extends GenericMetabox {
                     <?php $fields["two_lp_link"]->echo_field_with_label_left(); ?>
                 </div>
                 <div class="wpc_form_row">
+                    <?php $fields["three_lp"]->echo_field(); ?>
+                    <?php $fields["three_lp_link"]->echo_field_with_label_left(); ?>
+                </div>
+                <div class="wpc_form_row">
+                    <?php $fields["four_lp"]->echo_field(); ?>
+                    <?php $fields["four_lp_link"]->echo_field_with_label_left(); ?>
+                </div>
+                <div class="wpc_form_row">
                     <?php $fields["cd"]->echo_field(); ?>
                     <?php $fields["cd_link"]->echo_field_with_label_left(); ?>
                 </div>
@@ -87,8 +92,12 @@ class release_main extends GenericMetabox {
                     <?php $fields["lp_special_edition_link"]->echo_field_with_label_left(); ?>
                 </div>
                 <div class="wpc_form_row">
-                    <?php $fields["download"]->echo_field(); ?>
-                    <?php $fields["download_link"]->echo_field_with_label_left(); ?>
+                    <?php $fields["cd_special_edition"]->echo_field(); ?>
+                    <?php $fields["cd_special_edition_link"]->echo_field_with_label_left(); ?>
+                </div>
+                <div class="wpc_form_row">
+                    <?php $fields["digital"]->echo_field(); ?>
+                    <?php $fields["digital_link"]->echo_field_with_label_left(); ?>
                 </div>
                 <div class="wpc_form_row">
                     <?php $fields["seven_inch"]->echo_field(); ?>

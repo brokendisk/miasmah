@@ -103,12 +103,12 @@
 }
 
 .jp-stop {
-    background: url('../../img/jplayer.png') -4px -78px no-repeat;
+    background: url('../../img/jplayer.png') -4px -77px no-repeat;
     margin-left: 10px;
 }
 
 .jp-stop:focus {
-    background: url('../../img/jplayer.png') -41px -78px no-repeat;
+    background: url('../../img/jplayer.png') -41px -77px no-repeat;
 }
 
 .jp-previous {
@@ -157,7 +157,7 @@
 .jp-volume-controls {
     position: absolute;
     top: -8px;
-    left: 160px;
+    left: 140px;
     width: 200px;
     z-index: 1000;
 }
@@ -187,11 +187,11 @@
 }
 
 .jp-mute:focus {
-    background: url('../../img/jplayer.png') -41px -186px no-repeat;
+    background: url('../../img/jplayer.png') -45px -184px no-repeat;
 }
 
 .jp-state-muted .jp-mute {
-    background: url('../../img/jplayer.png') -41px -186px no-repeat;
+    background: url('../../img/jplayer.png') -45px -184px no-repeat;
 }
 
 .jp-state-muted .jp-mute:focus {
@@ -255,14 +255,14 @@
 }
 
 div.jp-playlist a {
-    color: $text-lighter;
+    color: $text-alternate;
     text-decoration: none;
 }
 
 div.jp-playlist a:hover {
-    color: $text-default;
+    color: $link-default;
 }
 
 div.jp-playlist a.jp-playlist-current {
-    color: $text-default;
+    color: $link-default;
 }

@@ -1,4 +1,7 @@
 			<footer class="footer" role="contentinfo">
+                
+                <!-- render favicon here -->
+                <img src="<?php echo get_template_directory_uri(); ?>/img/favicon.svg" alt="Miasmah Recordings" width="100" height="100">
 
 				<div id="footer-sidebar1">
 				<?php

@@ -1,8 +1,8 @@
 export function initNavigation() {
     const toggles = document.querySelectorAll('.hamburger');
 
-    toggles.forEach((toggle) => {
-        toggle.addEventListener('click', (e) => {
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', e => {
             e.preventDefault();
             if (toggle.classList.contains('is-active')) {
                 toggle.classList.remove('is-active');

@@ -17,36 +17,41 @@ class Release extends GenericContentType {
         new TextField       ($this, array('id' => 'title', 'hint' => '', 'required' => true ) );
         new TextField       ($this, array('id' => 'display_artist', 'hint' => '') );
         new TextField       ($this, array('id' => 'catalog_nr', 'hint' => '') );
-        new TextField       ($this, array('id' => 'type', 'hint' => '') );
         new DateField       ($this, array('id' => 'release_date', 'hint' => '2012-02-01', 'default' => ''));
         new ImageField      ($this, array('id' => 'cover') );
         new TextField       ($this, array('id' => 'morr_uuid', 'hint' => '', 'required' => true ) );
-        new TextField       ($this, array('id' => 'edition', 'hint' => '') );
-        new TextField       ($this, array('id' => 'credits', 'hint' => '') );
-        new TextField       ($this, array('id' => 'links', 'hint' => '') );
+        new TextAreaField   ($this, array('id' => 'edition', 'hint' => '') );
+        new TextAreaField   ($this, array('id' => 'credits', 'hint' => '') );
+        new TextAreaField   ($this, array('id' => 'links', 'hint' => '') );
         new SelectField     ($this, array('id' => 'release_status', 'default' => 'Coming Soon', 'options' => array(
             'Coming Soon',
             'Available',
             'Sold Out'
         )) );
         new CheckBoxField   ($this, array('id' => 'lp', 'label' => 'LP' ) );
-        new CheckBoxField   ($this, array('id' => 'two_lp'            , 'label' => '2LP' ) );
+        new CheckBoxField   ($this, array('id' => 'two_lp', 'label' => '2LP' ) );
+        new CheckBoxField   ($this, array('id' => 'three_lp', 'label' => '3LP' ) );
+        new CheckBoxField   ($this, array('id' => 'four_lp', 'label' => '4LP' ) );
         new CheckBoxField   ($this, array('id' => 'cd', 'label' => 'CD' ) );
         new CheckBoxField   ($this, array('id' => 'two_cd', 'label' => '2CD' ) );
         new CheckBoxField   ($this, array('id' => 'cassette', 'label' => 'Cassette' ) );
         new CheckBoxField   ($this, array('id' => 'box_set', 'label' => 'Box Set' ) );
         new CheckBoxField   ($this, array('id' => 'lp_special_edition', 'label' => 'LP Special Edition' ) );
-        new CheckBoxField   ($this, array('id' => 'download', 'label' => 'Download' ) );
+        new CheckBoxField   ($this, array('id' => 'cd_special_edition', 'label' => 'CD Special Edition' ) );
+        new CheckBoxField   ($this, array('id' => 'digital', 'label' => 'Digital' ) );
         new CheckBoxField   ($this, array('id' => 'seven_inch', 'label' => '7 inch' ) );
 
         new TextField   ($this, array('id' => 'lp_link', 'label' => 'LP Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'two_lp_link', 'label' => '2LP Link' , 'hint' => '') );
+        new TextField   ($this, array('id' => 'three_lp_link', 'label' => '3LP Link' , 'hint' => '') );
+        new TextField   ($this, array('id' => 'four_lp_link', 'label' => '4LP Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'cd_link', 'label' => 'CD Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'two_cd_link', 'label' => '2CD Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'cassette_link', 'label' => 'Cassette Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'box_set_link', 'label' => 'Box Set Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'lp_special_edition_link', 'label' => 'LP Special Edition Link' , 'hint' => '') );
-        new TextField   ($this, array('id' => 'download_link' , 'label' => 'Download Link' , 'hint' => '') );
+        new TextField   ($this, array('id' => 'cd_special_edition_link', 'label' => 'CD Special Edition Link' , 'hint' => '') );
+        new TextField   ($this, array('id' => 'digital_link' , 'label' => 'Digital Link' , 'hint' => '') );
         new TextField   ($this, array('id' => 'seven_inch_link', 'label' => '7" Link' , 'hint' => '') );
 
         // new FileField       ($this, array('id' => 'download' ) );

@@ -10,27 +10,31 @@
     }
 
     h1 {
-        font-size: $font-size-2xl; // 22pt for album title
+        font-size: $font-size-2xl;
     }
 
     h2 {
-        font-size: $font-size-sm; // 12pt for release details
+        font-size: $font-size-sm;
+
+        .release-number {
+            text-transform: uppercase;
+        }
         
         .release-date {
-            color: $text-lighter;
-            font-style: italic;
-            font-size: $font-size-xs; // 11pt for release date
+            color: $text-alternate;
+            font-family: $font-family-italic;
+            font-size: $font-size-xs;
         }
     }
 
-    h3 {
-        color: $text-lighter;
+    p {
+        padding: 0;
+        color: $text-alternate;
+        font-size: $font-size-sm;
     }
 }
 
 .release-cover {
-    margin-bottom: 2rem;
-
     img {
         display: block;
         width: 100%;
@@ -39,65 +43,97 @@
     }
 }
 
-.release-description {
-    margin-bottom: 2rem;
-}
-
 .release-status {
-    color: $text-lighter;
-    margin-bottom: 2rem;
+    color: $text-alternate;
 
     h3 {
         color: $text-default;
+    }
+
+    a {
+        display: block;
     }
 }
 
 .release-player {
     width: 100%;
-    margin-bottom: 3rem;
 }
 
 .release-player h3,
 .release-status h3 {
-    text-transform: lowercase;
-    font-size: $font-size-base; // 14pt for player controls and tracklist
+    font-family: $font-family-italic;
+    font-size: $font-size-base;
 }
 
-@media (width >= #{$breakpoint-medium}) {
-    .release-single {
-        display: grid;
-        grid-template-columns: 4fr 1fr 5fr;
-        grid-template-rows: 120px 372px auto;
-        gap: 4rem;
+.release-single {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "detail"
+        "cover"
+        "preview"
+        "description";
 
         .release-detail {
-            grid-column: 3;
-            grid-row: 1;
+            grid-area: detail;
         }
 
         .release-cover {
-            grid-column: 1 / 3;
-            grid-row: 1 / 3;
-            margin-bottom: 0;
+            grid-area: cover;
         }
 
         .release-description {
-            grid-column: 3;
-            grid-row: 2;
+            grid-area: description;
         }
 
-        .release-player {
-            grid-column: 1;
-            grid-row: 3;
+        .release-preview {
+            grid-area: preview;
+            display: grid;
+            grid-gap: 3rem;
+            grid-template-areas:
+                "status"
+                "player";
+
+                .release-player {
+                    grid-area: player;
+                }
+
+                .release-status {
+                    grid-area: status;
+                }
         }
 
         .release-status {
-            grid-column: 2;
-            grid-row: 3;
+            grid-area: status;
         }
-    }
 
-    .release.book {
-        grid-template-rows: auto;
-    }
+        @media (width >= #{$breakpoint-medium}) {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: min-content;
+            
+            .release-cover {
+                grid-column: 1;
+                grid-row: 1 / 3;
+            }
+
+            .release-detail {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .release-description {
+                grid-column: 2;
+                grid-row: 2 / -1; // Start at row 2, span to end (will grow with content)
+            }
+
+            .release-preview {
+                grid-column: 1;
+                grid-row: 3; // Start at row 3
+                grid-template-columns: 3fr 2fr;
+                grid-gap: 2rem;
+                grid-template-areas:
+                    "player status";
+            }
+        }
 }
