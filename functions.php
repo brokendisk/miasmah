@@ -125,6 +125,86 @@ function add_slug_to_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_to_body_class' );
 
 
+// Two Column template: Right Column Content metabox
+function add_right_column_metabox() {
+    add_meta_box(
+        'right_column_content',
+        'Right Column Content',
+        'right_column_metabox_callback',
+        'page',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'add_right_column_metabox' );
+
+
+function right_column_metabox_callback( $post ) {
+    wp_nonce_field( 'right_column_nonce', 'right_column_nonce_field' );
+    $content = get_post_meta( $post->ID, '_right_column_content', true );
+    wp_editor( $content, 'right_column_editor', array(
+        'textarea_name' => 'right_column_content',
+        'media_buttons' => true,
+        'textarea_rows'  => 15,
+    ) );
+}
+
+
+function save_right_column_content( $post_id ) {
+    if ( ! isset( $_POST['right_column_nonce_field'] ) ) {
+        return;
+    }
+    if ( ! wp_verify_nonce( $_POST['right_column_nonce_field'], 'right_column_nonce' ) ) {
+        return;
+    }
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+    if ( ! current_user_can( 'edit_page', $post_id ) ) {
+        return;
+    }
+    if ( isset( $_POST['right_column_content'] ) ) {
+        update_post_meta( $post_id, '_right_column_content', wp_kses_post( $_POST['right_column_content'] ) );
+    }
+}
+add_action( 'save_post', 'save_right_column_content' );
+
+
+// Show/hide the Right Column Content metabox based on selected page template
+function right_column_template_js() {
+    global $pagenow;
+    if ( $pagenow !== 'post.php' && $pagenow !== 'post-new.php' ) {
+        return;
+    }
+    if ( get_post_type() !== 'page' ) {
+        return;
+    }
+    ?>
+    <script>
+    (function() {
+        function toggleRightColumnBox() {
+            var template = document.querySelector('#page_template, [name="page_template"]');
+            var metabox = document.getElementById('right_column_content');
+            if (!template || !metabox) return;
+            metabox.style.display = (template.value === 'two-column.php') ? '' : 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleRightColumnBox();
+            // Classic editor dropdown
+            var sel = document.querySelector('#page_template');
+            if (sel) sel.addEventListener('change', toggleRightColumnBox);
+            // Block editor: watch for template changes via MutationObserver
+            var observer = new MutationObserver(toggleRightColumnBox);
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
+    })();
+    </script>
+    <?php
+}
+add_action( 'admin_footer', 'right_column_template_js' );
+
+
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
 function pagination() {
     global $wp_query;
